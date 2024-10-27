@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>tpl_mainmenu</title>
+	</head>
+
+	<body>
+
+		<div th:fragment="maincontent" id="maincontent">
+			<h2 th:text="${main_title}">${main_title}</h2>
+			<div id="subnavi">subnavi</div>
+			<div id="content">
+				<p th:text="${main_content}">${main_content}</p>
+			</div>
+		</div>
+
+	</body>
+</html>

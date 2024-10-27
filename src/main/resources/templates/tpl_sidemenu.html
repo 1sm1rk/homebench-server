@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>tpl_mainmenu</title>
+	</head>
+	
+	<body>
+        <div th:fragment="sidemenu" id="sidemenu">
+            <ul th:each="module : ${modules}">
+                 
+                 <li>
+                 	<a th:hx-get="@{${module.value}}" 
+                 		th:hx-trigger="click" 
+                 		hx-target="#maincontent" 
+                 		th:hx-swap="outerHTML" 
+                 		th:text="${module.key}">
+                 	</a>
+                 </li>
+             </ul>
+         </div>
+	</body>
+</html>

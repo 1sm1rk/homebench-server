@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+        <link th:href="@{/css/homebench.css}" rel="stylesheet" />
+        <script th:src="@{/webjars/htmx.org/2.0.3/dist/htmx.min.js}" defer></script>
+        
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div th:replace="~{tpl_mainmenu :: mainmenu}">
+                    <!-- gets replaced -->
+                </div>
+            </header>
+            <main >
+                <div th:replace="~{tpl_sidemenu :: sidemenu}">
+                    <!--  gets replaced -->
+                </div>
+            
+            
+                <div th:replace="~{tpl_maincontent :: maincontent}">
+                    <p>here goes the main content</p>
+                </div>
+           
+            </main>
+            <footer th:replace="~{tpl_footer :: footer}"><!-- gets replaced --></footer>
+        </div>
+    </body>
+</html>
