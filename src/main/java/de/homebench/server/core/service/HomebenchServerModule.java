@@ -1,24 +1,16 @@
 package de.homebench.server.core.service;
 
+import java.util.List;
+
+import de.homebench.server.core.entity.MenuEntry;
+
 public interface HomebenchServerModule {
 
-	/**
-	 * get the menu text
-	 * @return
-	 */
-	public String getLinkText();
-	
-	/**
-	 * get the module url, controller must exist and implement it
-	 * @return
-	 */
-	public String getLinkURL();
-	
 	/**
 	 * get submenu if exists
 	 * @return 
 	 */
-	public String getSubMenu();
+	public List<MenuEntry>getSubMenu();
 	
 	/**
 	 * get the info about the module

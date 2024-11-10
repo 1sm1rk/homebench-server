@@ -8,12 +8,13 @@
 	
 	<body>
 		<div th:fragment="mainmenu" id="mainmenu">
-			<ul>
-                <li class="leftmenu" ><a href="/">Home</a></li>
-                <li class="leftmenu" ><a href="#news">News</a></li>
-                <li class="leftmenu" ><a href="#contact">Contact</a></li>
-                <li class="rightmenu" ><a  href="#about">About</a></li>
-            </ul>
+            <ul >
+                 <li class="leftmenu" th:each="menuEntry : ${main_menu}">
+                 	<a th:href="${menuEntry.link}" th:text="${menuEntry.key}"></a>
+                 </li>
+                 <li class="rightmenu">DE <i class="fa-solid fa-globe"></i></li>
+             </ul>
+              
 		</div>
 	</body>
 </html>

@@ -11,11 +11,11 @@
             <ul th:each="module : ${modules}">
                  
                  <li>
-                 	<a th:hx-get="@{${module.value}}" 
+                 	<a th:hx-get="@{${module.link}}" 
                  		th:hx-trigger="click" 
                  		hx-target="#maincontent" 
                  		th:hx-swap="outerHTML" 
-                 		th:text="${module.key}">
+                 		th:text="${module.key}" href="#">
                  	</a>
                  </li>
              </ul>
